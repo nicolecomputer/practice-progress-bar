@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light dark;
+}
+
 * {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -22,6 +26,7 @@ p {
 body {
   width: 100%;
   align-items: center;
+  background-color: light-dark(white, rgb(50, 50, 49));
 }
 
 #root {
@@ -35,7 +40,7 @@ h2 {
   padding: 10px 0;
   border-bottom: 1px solid lightgrey;
   font-style: italic;
-  color: rebeccapurple;
+  color: light-dark(rebeccapurple, white);
 }
 
 .progress {
@@ -43,15 +48,15 @@ h2 {
   overflow: hidden;
   min-height: 40px;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: light-dark(rgb(255, 255, 255), rgb(126, 75, 75));
   border-radius: 10px;
-  border: 2px solid red;
-  box-shadow: 2px 4px 0 rgb(216, 216, 216);
+  border: 2px solid light-dark(red, rgb(182, 61, 61));
+  box-shadow: 2px 4px 0 light-dark(rgb(216, 216, 216), rgb(17, 17, 17));
 }
 
 .progress .bar {
   background-color: rgb(239, 111, 111);
-  box-shadow: 1px 0px 2px rgb(184, 184, 184);
+  box-shadow: 1px 0px 2px light-dark(rgb(184, 184, 184), rgb(101, 94, 94));
   position: absolute;
   top: 0;
   left: 0;
@@ -100,6 +105,7 @@ button {
   font-size: 14px;
   transition: transform 200ms, box-shadow 200ms;
   user-select: none;
+  color: black;
 }
 
 button:enabled:hover {
